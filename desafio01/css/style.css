@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Rubik:500&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background: #f5f7fa;
+	max-width: 900px;
+	min-height: 100vh;
+	display: grid;
+	margin: 0 auto;
+}
+
+section {
+	display: grid;
+	margin: 0 auto;
+}
+
+.card {
+	max-width: 80%;
+	min-height: 70vh;
+	background: #fff;
+	display: flex;
+	box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+	justify-self: center;
+	align-self: center;
+}
+
+.card-image {
+	max-width: 50%;
+}
+
+.card-image img[src='img/jessica-radanavong-mrYkTuAesKE-unsplash.jpg'] {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: -248px 0px;
+}
+
+blockquote {
+	max-width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	position: relative;
+	padding: 0 48px;
+}
+
+blockquote > p::before {
+	content: url('../img/quote-marks.svg');
+	filter: grayscale(52%) sepia(70%) brightness(132%) saturate(200%);
+	display: block;
+	width: 38px;
+	position: absolute;
+	top: 1em;
+}
+
+blockquote > p:first-child {
+	font-family: 'Playfair Display', 'Times New Roman', Times, Georgia, serif;
+	font-size: 1em;
+	line-height: 1.8;
+	color: #727278;
+}
+
+footer cite > p {
+	font-family: 'Rubik', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	color: #373742;
+}
+
+footer img {
+	color: #bababa;
+	height: 24px;
+	margin-top: 8px;
+	opacity: 0.3;
+}
+
+@media (max-width: 860px) {
+	.card {
+		min-width: 90%;
+	}
+}
+
+@media (max-width: 625px) {
+	body {
+		max-width: 500px;
+	}
+
+	.card {
+		min-height: 90vh;
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: space-between;
+	}
+
+	.card-image {
+		max-width: 100%;
+	}
+
+	blockquote {
+		max-width: 100%;
+		padding-top: 48px;
+	}
+
+	footer {
+		margin-top: 24px;
+		text-align: end;
+	}
+
+	footer img {
+		margin-top: 0;
+	}
+
+	.card-image img[src='img/jessica-radanavong-mrYkTuAesKE-unsplash.jpg'] {
+		object-position: 0px 0px;
+	}
+}
