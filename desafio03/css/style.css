@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap');
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	background: #f2f7ff;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Rubik', sans-serif;
+}
+
+.container {
+	max-width: 80%;
+	min-height: 70vh;
+	display: flex;
+	column-gap: 20px;
+}
+
+.card {
+	max-width: 340px;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	border-radius: 20px;
+	box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+
+.card-content {
+	color: #505050;
+	font-size: 20px;
+	font-weight: 300;
+	line-height: 1.5;
+	margin: 32px 32px;
+	position: relative;
+	flex-grow: 1;
+}
+
+.card-content p::after {
+	content: url('../img/quotation-39627.svg');
+	filter: brightness(125%);
+	display: block;
+	width: 20%;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.profile {
+	min-height: 140px;
+	border-radius: 0 0 10px 10px;
+	background-image: linear-gradient(249deg, #7180e1 113%, #5866c3 4%);
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+
+.profile-avatar img {
+	width: 90px;
+	height: 90px;
+	border: 3px solid #fff;
+	border-radius: 50%;
+	object-fit: cover;
+	position: absolute;
+	top: -45px;
+	left: calc(50% - 48px);
+}
+
+.profile-content {
+	font-size: 16px;
+	line-height: 1.2;
+	text-align: center;
+	color: #ffffff;
+	padding-bottom: 24px;
+}
+
+.profile-content p:first-child {
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	font-weight: 500;
+}
+
+.profile-content p:last-child {
+	color: #bac3ff;
+	font-weight: 400;
+}
+
+@media (max-width: 806px) {
+	.container {
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 690px) {
+	.container {
+		max-width: 90%;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+	.card {
+		min-width: 90%;
+		min-height: 80vh;
+		display: flex;
+		margin-top: 40px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	.card:last-child {
+		margin-bottom: 40px;
+	}
+}
